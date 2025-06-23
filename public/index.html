@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rental | Find Your Next Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="/" class="logo">HouseRental</a>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="/login.html" class="btn">Login / Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Find Your Perfect Rental, Effortlessly.</h1>
+                <p>
+                    Browse thousands of verified listings from trusted owners.
+                    Your dream home is just a few clicks away.
+                </p>
+                <a href="/tenant/search.html" class="btn">Start Your Search</a>
+            </div>
+            <div class="hero-image-slider">
+                <div class="slider" id="slider">
+                    <div class="slide"><img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Beautiful modern house"></div>
+                    <div class="slide"><img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg" alt="Suburban family home"></div>
+                    <div class="slide"><img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="Luxury apartment building"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             NEW FEATURES SECTION
+        ================================================================== -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </div>
+                        <h3>Advanced Search</h3>
+                        <p>Easily filter properties by city, price, number of bedrooms, and more to find exactly what you're looking for.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        </div>
+                        <h3>Verified Listings</h3>
+                        <p>Every property is verified by our team, ensuring you are dealing with real listings from trustworthy owners.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <h3>Direct Communication</h3>
+                        <p>Connect directly with property owners to ask questions, schedule viewings, and finalize your rental agreement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             NEW ABOUT SECTION
+        ================================================================== -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About HouseRental</h2>
+                <p class="about-text">
+                    Founded in 2024, HouseRental was created with a simple mission: to make the process of finding and renting a home as seamless and secure as possible. We grew tired of navigating confusing websites filled with outdated or fake listings. We believe that everyone deserves a safe, comfortable place to call home, and finding that place shouldn't be a struggle. Our platform connects tenants directly with verified owners, fostering a community built on trust and transparency.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================================================================
+         NEW FOOTER SECTION
+    ================================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4 class="logo">HouseRental</h4>
+                <p>Your one-stop platform for finding the perfect rental property. Secure, simple, and transparent.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="/tenant/search.html">Search</a></li>
+                    <li><a href="/login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@houserental.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 HouseRental. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+      // Simplified slider logic (ideally move to /js/index.js)
+      const slider = document.getElementById('slider');
+      if(slider){
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 4000);
+      }
+    </script>
+</body>
+</html>

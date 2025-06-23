@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | House Rental</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Your Account</h2>
+        <form id="signup-form"> <!-- ID for auth.js -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Create a strong password">
+            </div>
+            <!-- Crucial: Role Selection -->
+            <div class="form-group">
+                <label>I am a...</label>
+                <div style="display: flex; gap: 1rem;">
+                    <label style="flex: 1; border: 1px solid #ccc; padding: 0.8rem; border-radius: 8px; cursor: pointer;">
+                        <input type="radio" name="role" value="owner" required> Owner
+                    </label>
+                    <label style="flex: 1; border: 1px solid #ccc; padding: 0.8rem; border-radius: 8px; cursor: pointer;">
+                        <input type="radio" name="role" value="tenant" required> Tenant
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn">Create Account</button>
+            <div id="error-message" style="color:red; margin-top:1rem; text-align:center;"></div>
+        </form>
+        <p>Already have an account? <a href="/login.html">Login</a></p>
+    </div>
+    <script src="/js/auth.js" defer></script>
+</body>
+</html>

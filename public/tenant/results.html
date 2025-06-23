@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | House Rental</title>
+
+    <!-- All stylesheets are needed here -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <style>
+        .results-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #666; /* Using a direct color for clarity */
+            font-size: 1.2rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            display: none; /* Hidden by default, shown by JS */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">HouseRental</a>
+        <div class="nav-links">
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/tenant/search.html">New Search</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="results-header">
+            <h1>Search Results</h1>
+            <p>Showing properties based on your criteria.</p>
+        </div>
+
+        <!-- 
+            THE FIX IS HERE: The class is now "listings-container" 
+            to match the CSS file. The ID remains "card-container" 
+            for the JavaScript to find it.
+        -->
+        <div id="card-container" class="listings-container">
+            <!-- Loading indicator could go here -->
+            <p>Loading results...</p>
+        </div>
+
+        <!-- This message will be shown by JS if no results are found -->
+        <div id="no-results-message" class="no-results">
+            <p><strong>No properties match your search criteria.</strong></p>
+            <p><a href="/tenant/search.html">Try a new search?</a></p>
+        </div>
+    </div>
+
+    <!-- The JavaScript that makes this page work -->
+    <script src="/js/tenant.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (head content is the same as before) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Rentals | House Rental</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .search-container {
+            background-color: var(--surface-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- ... (navbar is the same) ... -->
+    <nav class="navbar">
+        <a href="/" class="logo">HouseRental</a>
+        <div class="nav-links">
+            <a href="/dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- The form is now much simpler -->
+        <div class="search-container">
+            <h2>Find Your Next Home</h2>
+            <!-- 
+              ACTION: Tells the form where to send the user.
+              METHOD="GET": Appends the form data to the URL as query parameters.
+            -->
+            <form action="/tenant/results.html" method="GET" id="search-form">
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="e.g., Springfield">
+                </div>
+                <div class="form-group">
+                    <label for="bedrooms">Min Bedrooms</label>
+                    <input type="number" id="bedrooms" name="bedrooms" min="1" placeholder="Any">
+                </div>
+                <div class="form-group">
+                    <label for="maxRent">Max Rent ($/month)</label>
+                    <!-- IMPORTANT: The 'name' attribute was changed to match the API query -->
+                    <input type="number" id="maxRent" name="maxRent" min="0" placeholder="Any">
+                </div>
+                <button type="submit" class="btn">Search Properties</button>
+            </form>
+        </div>
+    </div>
+    <!-- NO JAVASCRIPT NEEDED ON THIS PAGE ANYMORE for the form -->
+</body>
+</html>
